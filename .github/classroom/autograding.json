@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "Test 1. Player is created correctly",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_create",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 2. Potion and Elixirs are created correctly",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_potion",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 3. Weapon superclass is created correctly",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_weapon",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 4. Swords and Blasters are created correctly",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_sword_and_blaster",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 5. Using a weapon causes damage and reduces manna",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_weapon_causes_damage",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test 6. Drinking an elixir removes elixir&#39;s benefit",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_drink_elixir",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 7. Drinking an elixir restores health",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_health_restored",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 8. Health and manna never go beyond bounds",
+      "setup": "sudo -H pip3 -q install pytest",
+      "run": "python3 -m pytest test/test_adventure.py::test_health_bounds",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Test 9. Game play is correct",
+      "setup": "",
+      "run": "python3 adventure.py | python3 test/scr.py",
+      "input": "",
+      "output": "Frodo's health: 85, manna: 95\r\nSauron's health: 95, manna: 0",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 2
+    }
+  ]
+}
