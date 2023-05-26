@@ -23,9 +23,9 @@ Create a `Potion` class that represents a potion. Drinking a potion restores a P
 
 Every Potion has a name, and a benefit level (int), representing how many points it restores to a Player if the potion is drunk.
 - Create a constructor for Potion that takes a String name, and and a benefit level, and initializes the name and benefit level for that potion. If the benefit level is not specified, the default value is 10 (read about default arguments [here](https://www.geeksforgeeks.org/default-arguments-in-python/)).
-- Create a getter (`get_name()`) that returns the name of the potion.
-- Create a getter (`get_benefit()`) that returns the benefit level of the potion. 
-- Create a `drink()` method that
+- Create a getter (`get_name`) that returns the name of the potion.
+- Create a getter (`get_benefit`) that returns the benefit level of the potion. 
+- Create a `drink` method that
   - Returns the value of the benefit level of the potion, and
   - Reduces the benefit value of the potion to 0 (after you drink a potion, it loses all potency).
 
@@ -35,13 +35,13 @@ Create a `Weapon` class that represents a weapon. Getting hit by a weapon causes
 
 Every Weapon has a name, and a damage level (int), representing how many points it reduces a Player's health if the Player is hit by it, and a cost to using it (int).
 - Create a constructor for Weapon that takes a String name of the weapon. It initializes the damage level to 0, and the cost to 0.
-- Create a getter (`get_damage()`) that returns the damage level of the weapon.
-- Create a getter (`get_name()`) that returns the name of the weapon.
-- Create a getter (`get_cost()`) that returns the cost of using the weapon.
+- Create a getter (`get_damage`) that returns the damage level of the weapon.
+- Create a getter (`get_name`) that returns the name of the weapon.
+- Create a getter (`get_cost`) that returns the cost of using the weapon.
 
 Every weapon has a special ultimate level move that inflicts lots of damage, but costs all the player's manna to use.
 
-- Create a method `ultimate_damage()` that returns the amount of damage the weapon would cause if the ultimate move was used. This should just return 0 for the Weapon superclass.
+- Create a method `ultimate_damage` that returns the amount of damage the weapon would cause if the ultimate move was used. This should just return 0 for the Weapon superclass.
 
 ## Subclasses
 
@@ -70,9 +70,9 @@ Create a `Blaster` subclass of Weapon. Put this in **blaster.py**.
 
 Players can attack each other with weapons. When a Player is attacked, the player suffers damage.
 
-- Write a void method `suffer_damage(damage)` in the Player class. When this method is called on a player, the player's health points are reduced by the given amount of damage. Damage never goes below 0.
+- Write a void method `suffer_damage` in the Player class. When this method is called on a player, the player's health points are reduced by the given amount of damage. Damage never goes below 0.
 ```
-def suffer_damage(damage):
+def suffer_damage(self, damage):
     """The player's health is reduced by damage points."""
     ....
 ```
@@ -147,7 +147,8 @@ print("Sauron's health: %d, manna: %d" % (sauron.get_health(), sauron.get_manna(
 
 Submit all your files: player.py potion.py magicelixir.py weapon.py sword.py blaster.py adventure.py
 
-
+# Hints
+Remember that all methods in a class start with the `self` as the first parameter.
 
 
 # What's in a name?
